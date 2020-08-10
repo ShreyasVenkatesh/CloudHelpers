@@ -1,4 +1,10 @@
-﻿Param(
+## Bulk Secret Export ##
+## Description : This is a power shell script to export selected Secrets from a given Source Azure Key Vault to Azure Destination Key Vault.
+## $sourceKeyVault : Name of Source Key Vault
+## $destinationKeyVault : Name of Destination Key Vault
+## $secretsList : List of secrets for ex: secret1,secret2,secret3
+
+Param(
 [Parameter(Mandatory)]
 [string]$sourceKeyVault,
 [Parameter(Mandatory)]
@@ -28,4 +34,3 @@ if(!$SecretsFound)
 {
     Write-Host 'No Secrets in Source Key Vault'
 }
-
