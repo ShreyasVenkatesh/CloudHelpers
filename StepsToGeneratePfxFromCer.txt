@@ -1,0 +1,15 @@
+Steps to generate *.pfx from *.cer : 
+
+1. Download the certificate on the machine from which you generated the certificate using SSLAdmin.
+2. Open MMC, add snap in of certificates from Local Computer.
+3. Import the downloaded .cer file into your Local Computer certificates.
+4. Right click on the certificate and click export.
+5. Select export private Key as Yes.
+6. In Export File Format, Select Pfx and check all the options listed below.
+	Include all certificates in the certificate path if possible.
+	Export all extended properties
+	Enable certificate privacy.
+7. Be careful and never by mistake check the Delete private key if export is successful, This will not allow you to generate Pfx going forward.
+8. In Security, Check the password option and enter a certificate password and select encryption as SHA-1.
+9. Enter new file name for your pfx file, ideally it should be the same name as .cer file.
+10. Click on finish, now pfx can be installed with the newly generated certificate file and password.
